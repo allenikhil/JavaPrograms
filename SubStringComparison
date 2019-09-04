@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class SubStringComparison {
+
+    public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        SortedSet<String> sets=new TreeSet<String>();
+         for(int i=0;i<=s.length()-k;i++){
+                 sets.add(s.substring(i,i+k));
+                }
+    smallest=sets.first();
+    largest=sets.last();
+    System.out.println(sets);
+    System.out.println("lexicographically smallest and largest substrings are:");
+        return smallest + "\n" + largest;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a String");
+        String s = scan.next();
+        System.out.println("Enter Size of SubString U Want");
+        int k = scan.nextInt();
+        scan.close();
+        if(k>s.length())
+        {
+            System.out.println("SubString Size Should be less than size of string");
+        }
+        else{
+        System.out.println("lexicographically order of  substrings are:");
+        System.out.print(getSmallestAndLargest(s, k));}
+    }
+}
