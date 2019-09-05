@@ -1,0 +1,20 @@
+// Java Program to capitalize each word in string 
+import java.util.*;
+public class CapitalizeEachWord1stLetter
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a sentance");
+		String input=sc.nextLine();
+		input = input.toLowerCase(); 
+		String arr[]=input.split(" ");
+		String op="";
+		for(int i=0;i<arr.length;i++)
+		{
+		    char up=Character.toUpperCase(arr[i].charAt(0));
+		    arr[i]=up+arr[i].substring(1);
+		    op=op+" "+arr[i];
+		}
+		System.out.println(op.trim());
+	}
+}
