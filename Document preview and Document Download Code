@@ -1,0 +1,62 @@
+if (extension != null) {
+				switch (extension) {
+				case "gif": {
+					response.setContentType("image/gif");
+				}
+					break;
+				case "pdf": {
+					response.setContentType("application/pdf");
+				}
+					break;
+				case "jpeg": {
+					response.setContentType("image/jpeg");
+				}
+					break;
+				case "jpg": {
+					response.setContentType("image/jpg");
+				}
+					break;
+				case "rar": {
+					response.setContentType("application/x-rar-compressed");
+				}
+					break;
+				case "zip": {
+					response.setContentType("application/zip");
+				}
+					break;
+				case "dwg": {
+					response.setContentType("application/acad");
+				}
+					break;
+				case "dxf": {
+					response.setContentType("application/dxf");
+				}
+					break;
+				}
+			}
+			if(extension.equals("gif")||extension.equals("pdf")||extension.equals("jpeg")||extension.equals("jpg")) {
+			response.setHeader("Expires", "0");
+			response.setHeader("Cache-Control", "must-revalidate, post-check=0, pre-check=0");
+			response.setHeader("Pragma", "public");
+			
+			response.setHeader("Content-Disposition", "inline; filename=" + byteArray);
+			response.setContentLength(byteArray.length);
+			response.getOutputStream().write(byteArray);
+			response.getOutputStream().flush();
+			}
+			else {
+			response.setHeader("Content-disposition", "attachment; filename=" + fileName);;
+			FileInputStream in = null;
+			in = new FileInputStream(file);
+
+			OutputStream out = response.getOutputStream();
+
+			byte[] buffer = new byte[10242880]; // use bigger if you want
+			int length = 0;
+
+			while ((length = in.read(buffer)) > 0) {
+				out.write(buffer, 0, length);
+			}
+			in.close();
+			out.close();
+			out.flush();}
