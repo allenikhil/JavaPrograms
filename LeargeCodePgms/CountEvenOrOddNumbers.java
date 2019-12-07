@@ -2,7 +2,7 @@ package LeargeCodePgms;
 
 import java.util.Scanner;
 
-public class CountEvenOrOddNUmbers 
+public class CountEvenOrOddNumbers 
 {
 	public static void main(String[] args) {
 		
