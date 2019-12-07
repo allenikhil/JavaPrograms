@@ -24,11 +24,11 @@ public static void main(String[] args)
 	
 	if(s1.equals(s2))
 	{
-		System.out.println("yes");
+		System.out.println("Two Strings are permutation each other");
 	}
 	else
 	{
-		System.out.println("no");
+		System.out.println("There is no permutation in between two strings ");
 	}
 }
 }
