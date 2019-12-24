@@ -1,0 +1,20 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+public class Main {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter a number to print pattern");
+    int n = in.nextInt();
+    char [] arreglo = new char [n];
+    Arrays.fill(arreglo, ' ');
+    
+    for (int i = 1; i <= n; i++){
+        arreglo[n-i] = '#';
+        System.out.println(arreglo);
+    }
+    }
+}
