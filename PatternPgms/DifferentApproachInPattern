@@ -11,8 +11,14 @@ public class Main {
     int n = in.nextInt();
     char [] arreglo = new char [n];
     Arrays.fill(arreglo, ' ');
-    
+
     for (int i = 1; i <= n; i++){
+        arreglo[n-i] = '#';
+        System.out.println(arreglo);
+    }
+     Arrays.fill(arreglo, ' ');
+     System.out.println("--------");
+    for (int i = n; i >0; i--){
         arreglo[n-i] = '#';
         System.out.println(arreglo);
     }
