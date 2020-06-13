@@ -1,4 +1,4 @@
-package StringPgms;
+package javaexamples;
 
 import java.util.Scanner;//not completed
 
