@@ -1,6 +1,6 @@
 package javaexamples;
 
-import java.util.Scanner;//not completed
+import java.util.*;//not completed
 
 public class MaximumOccurenceOfCharacter
 {
@@ -19,10 +19,18 @@ public class MaximumOccurenceOfCharacter
 			int ascii=ch;
 			arr[ascii]++;
 		}
-	   for(int a:arr)
-	   {
-		   System.out.println(a);
-	   }
+	   
+	   int max=arr[0];
+	   int position=0;
+       for(int j=1;j<95;j++)
+       {
+           if(max<arr[j])
+               {
+                   max=arr[j];
+                   position=j;
+               }
+       }
+		   System.out.println("Maximum Occurence is "+max+" of character "+(char)position);
 	   
 	}
 }
