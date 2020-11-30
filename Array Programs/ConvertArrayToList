@@ -1,0 +1,6 @@
+int[] ints = {1, 2, 3};
+List<Integer> intList = new ArrayList<Integer>(ints.length);
+for (int i : ints)
+{
+    intList.add(i);
+}
