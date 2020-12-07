@@ -1,0 +1,28 @@
+class  A
+{
+	A(int i)
+	{
+		System.out.println("In A int arg constructor..");
+	}
+}
+class B extends A
+{
+	B()
+	{
+		super(4);
+		System.out.println("In B default constructor..");
+	}
+	B(double j)
+	{
+		super(5);
+		System.out.println("In B double arg constructor...");
+	}
+}
+class Inheritpgm4
+{
+	public static void main(String[] args) 
+	{
+		B b1=new B();
+		B b2=new B(5.3);
+	}
+}

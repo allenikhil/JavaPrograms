@@ -1,0 +1,29 @@
+interface C
+{
+	public void move1();
+	public void move2();
+}
+class E implements C 
+{
+	public void move1()
+	{
+		System.out.println("move north ");
+	}
+}
+class F implements C
+{
+    public void move2()
+	{
+		System.out.println("move south ");
+	}
+}
+class Sample
+{
+	public static void main(String[] args) 
+	{
+		E r1=new E();
+		r1.move1();
+		F r2=new F();
+		r2.move2();
+	}
+}

@@ -1,0 +1,27 @@
+interface P
+{
+	public void move10();
+}
+class Q 
+{
+	public void move11()
+	{
+		System.out.println("move north ");
+	}
+}
+class R extends Q implements P
+{
+	public void move10()
+	{
+		System.out.println("move south ");
+	}
+}
+class Interfacepgm5
+{
+	public static void main(String[] args) 
+	{
+		R r1=new R();
+		r1.move11();
+		r1.move10();
+	}
+}
