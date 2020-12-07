@@ -1,0 +1,10 @@
+class Increment
+{
+	public static void main(String[] args) 
+	{
+		
+		int a=37;
+		System.out.println(++a + a++);
+		System.out.println(a);
+	}
+}

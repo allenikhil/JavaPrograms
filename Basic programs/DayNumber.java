@@ -1,0 +1,19 @@
+class DayNumber 
+{
+	public static void main(String[] args) 
+	{
+		int dayNumber=1;
+		switch(dayNumber)
+		{
+			case 1: System.out.println("mon");
+			case 2: System.out.println("thu");
+			case 3: System.out.println("wed");
+			case 4: System.out.println("thr");
+			case 5: System.out.println("fri");
+			case 6: System.out.println("sat");
+			case 7: System.out.println("sun");
+			        break;
+		default:System.out.println("invalid daynumber");
+	}
+}
+}

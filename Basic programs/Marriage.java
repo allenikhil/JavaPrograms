@@ -1,0 +1,30 @@
+class Marriage 
+{
+	public static void main(String[] args) 
+	{
+		int girlAge=18;
+		int boyAge=21;
+		if((girlAge>=18) && (boyAge>=21))
+		{
+		System.out.println("Both are eligible for marriage");
+		}
+		else if((girlAge<18) && (boyAge>=21))
+		{
+			int lackGirlAge=18-girlAge;
+			System.out.println("girl lacking age by" +lackGirlAge +"years");
+		}
+		else if((girlAge>=18) && (boyAge<21))
+		{
+			int lackBoyAge=21-boyAge;
+			System.out.println("boy lacking age by " +lackBoyAge +"years");
+		}
+		else
+		{
+			int lackGirlAge=18-girlAge;
+			int lackBoyAge=21-boyAge;
+			System.out.println("girl lacking age by" +lackGirlAge +"years");
+            System.out.println("boy lacking age by" +lackBoyAge +"years");
+		}
+
+	}
+}
