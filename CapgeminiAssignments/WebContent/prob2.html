@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Form</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">  
+$(document).ready(function(){
+
+//let's create arrays
+var electronics = [
+	{display: "Television-20k Rs", value: "television" }, 
+	{display: "Laptop-30k Rs", value: "laptop" }, 
+	{display: "Phone-10k Rs", value: "phone" }];
+	
+var grocery = [
+	{display: "Soap-40Rs", value: "soap" }, 
+	{display: "Powder-90Rs", value: "powder" }];
+	
+//If parent option is changed
+$("#parent_selection").change(function() {
+		var parent = $(this).val(); //get option value from parent 
+		
+		switch(parent){ //using switch compare selected option and populate child
+			  case 'electronics':
+			 	list(electronics);
+				break;
+			  case 'grocery':
+			 	list(grocery);
+				break;					
+			default: //default child option is blank
+				$("#child_selection").html('');	 
+				break;
+		   }
+});
+
+//function to populate child select box
+function list(array_list)
+{
+	$("#child_selection").html(""); //reset child options
+	$(array_list).each(function (i) { //populate child options 
+		$("#child_selection").append("<option value=\""+array_list[i].value+"\">"+array_list[i].display+"</option>");
+	});
+}
+
+});
+function totalprice()
+{
+}
+</script>
+</head>
+<body>
+<h1>Product Details</h1>
+<div class="product-form">
+<form>
+<table>
+<tr>
+<td>Category :</td><td> <select name="parent_selection" id="parent_selection">
+    <option value="">-- Please Select --</option>
+    <option value="electronics">Electronics</option>
+    <option value="grocery">Grocery</option>
+</select></td>
+</tr>
+<tr>
+<td>Product:</td>
+<td><select name="child_selection" id="child_selection">
+</select></td>
+</tr>
+</div>
+<tr>
+<td>Quantity:</td>
+<td><input type="text" name="qnty"></td>
+</tr>
+<tr>
+<td>Total Price:</td>
+<td><input type="text" name="tprice"></td>
+</tr>
+<tr>
+<td><input type="submit"></td>
+<td><input type="reset" value="Clear"></td>
+</table>
+</form>
+</div>
+</body>
+</html>
