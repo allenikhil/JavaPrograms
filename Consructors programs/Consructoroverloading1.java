@@ -1,0 +1,40 @@
+class AddUser 
+{
+	String un,fn,ln,mn,ps,rps;
+	AddUser(String un,String fn,String ln,String mn,String ps,String rps)
+	{
+		this.un=un;
+		this.fn=fn;
+		this.ln=ln;
+		this.mn=mn;
+		this.ps=ps;
+		this.rps=rps;
+	}
+	AddUser(String un,String fn,String ln,String ps,String rps)
+	{
+		this.un=un;
+		this.fn=fn;
+		this.ln=ln;
+		this.ps=ps;
+		this.rps=rps;
+	}
+	public void userInfo()
+	{
+		System.out.println("=======");
+		System.out.println("user name:"+un);
+		System.out.println("first name:"+fn);
+		System.out.println("last name:"+ln);
+		if(mn!=null)
+			System.out.println("middle name:"+mn);
+	}
+}
+class user
+{
+	public static void main(String[] args) 
+	{
+		AddUser a1=new AddUser("Alle Nikhil","alle","nikhil","123p","123p");
+		AddUser a2=new AddUser("Alle Nikhil","alle","nikhil","padmashali","4321p","4321p");
+		a1.userInfo();
+		a2.userInfo();
+	}
+}
