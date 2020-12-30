@@ -1,0 +1,19 @@
+
+
+import java.util.Scanner;
+public class PrintDoubleValueAfterDecimal
+{
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the  number:");
+		int number = sc.nextInt();
+		double d=number;
+		System.out.printf("%.2f\n",decimal(d));
+	}
+	
+	static double decimal(double d){
+		int dd = (int)d;
+		d -=dd;
+		return d;
+	}
+}
