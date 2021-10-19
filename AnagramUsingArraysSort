@@ -1,1 +1,28 @@
+import java.util.*;
+
+public class AnagramUsingArraysSort
+{
+    static boolean isAnagram(String a, String b) 
+    {
+         String a1=a.toLowerCase();
+        String a2=b.toLowerCase();
+        char[] c1 = a1.toCharArray();
+        char[] c2 = a2.toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        String str1 = new String(c1);
+        String str2 = new String(c2);
+        return str1.equals(str2);
+    }
+        
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+	}
+}
 
